@@ -1,18 +1,17 @@
-// Declarando as variáveis, que nesse caso são as três notas do nosso aluno fictício
-var nota1 = 7;
-var nota2 = 7;
-var nota3 = 7;
 
+var notas = [5, 9, 8]
 // Criando uma variável pra atestar se o aluno foi aprovado
 var aprovado = false;
+var contador = 1;
 
 // Variável que calcula o valor da média
-var media = (nota1 + nota2 + nota3) / 3;
+var media = (notas[0] + notas[1] + notas[2]) / notas.length;
 
-// Mostrando as notas e a média no console
-console.log("Nota1: ", nota1.toFixed(2));
-console.log("Nota2: ", nota2.toFixed(2));
-console.log("Nota3: ", nota3.toFixed(2));
+// Passa por todas as notas, mostrando no console
+for (var i = 0; i < notas.length; i++) {
+    console.log("Nota ", contador, ":", notas[i].toFixed(2));
+    contador++;
+}
 
 console.log("🎓 Média: ", media.toFixed(2));
 
@@ -34,5 +33,5 @@ while (aprovado) {
 
   console.log("✅ APROVADO!");
   break;
-  
+
 }
